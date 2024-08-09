@@ -1,5 +1,7 @@
 from search import *
 import math
+#draw graph of each agent
+
 
 class RoutingGraph(Graph):
     def __init__(self, map_str):
@@ -33,7 +35,8 @@ class RoutingGraph(Graph):
     def outgoing_arcs(self, tail_node):
         row, col, fuel = tail_node
         arcs = []
-        
+
+        # would need to adjust this depending on size of graph
         movements = [
             ('N', -1, 0, 5), ('NE', -1, 1, 7), ('E', 0, 1, 5), ('SE', 1, 1, 7),
             ('S', 1, 0, 5), ('SW', 1, -1, 7), ('W', 0, -1, 5), ('NW', -1, -1, 7)
